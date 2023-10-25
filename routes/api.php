@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\BookController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\TestController;
+use App\Http\Controllers\Api\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/books/latest', [BookController::class, 'latest'])->name('latest.response');
+
+// Route::get('book/{id}',[BookController::class, 'show'])->name('book.detail');
+
+
+Route::get('/users',[UserController::class, 'index']);
