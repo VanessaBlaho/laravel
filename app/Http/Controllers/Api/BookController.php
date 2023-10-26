@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Book;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -23,4 +24,5 @@ class BookController extends Controller
     
         return view('book.detail', compact('book'));
     }
+   
 }

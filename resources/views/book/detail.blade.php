@@ -11,9 +11,14 @@
     <ul>
         @forelse ($book->reviews as $review)
             <li>
-                {{-- <strong>User:</strong> {{ $review->user->name }}<br> --}}
+                <strong>User:</strong> {{ $review->user->name }}<br>
                 <strong>Review:</strong> {{ $review->text }}
             </li>
+            <form action="{{route('review.destroy',$review->id)}}" method="post">
+                @method('DELETE')
+                @csrf
+                <button>Delete</button>
+            </form>
         @empty
             <li>No reviews for this book yet.</li>
         @endforelse
@@ -21,19 +26,20 @@
 
     @if (Auth::check())
 
-    <h2>Submit a Review</h2>
-    <form method="POST" action="{{ route('book.review.store', ['book_id' => $book->id]) }}">
-        @csrf
-        <div class="form-group">
-        <label for="reviewText">Book Review:</label>
-        <br>
-        <textarea name="text" id="reviewText" class="form-control" rows="10" required>
+        <h2>Submit a Review</h2>
+        <form method="POST" action="{{ route('book.review.store', ['book_id' => $book->id]) }}">
+            @csrf
+            <div class="form-group">
+            <label for="reviewText">Book Review:</label>
+            <br>
+            <textarea name="text" id="reviewText" class="form-control" rows="10" required>
 
-        </textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit Review</button>
-     
-    </form>
+            </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+        
+        </form>
+
     @else
     <p>You must be logged in to submit a review.</p>
 @endif

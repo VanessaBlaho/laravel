@@ -33,5 +33,13 @@ class BookReviewController extends Controller
         return redirect()->route('book.detail', $book_id);
 
     }
-    
+    public function destroy(string $id)
+    {
+        $review= Review::findOrFail($id);
+        
+        $review->delete();
+
+        ///change this//
+        return redirect()->back();
+    }
 }
