@@ -1,3 +1,4 @@
+@extends('layouts/main', [ 'current_page' => 'login'])
 <form action="{{ route('login') }}" method="post">
  
     @csrf

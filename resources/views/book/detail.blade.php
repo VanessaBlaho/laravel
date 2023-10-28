@@ -1,6 +1,6 @@
 @include('common.success_message')
     @include('common.error_message')
-  
+    @extends('layouts/main', [ 'current_page' => 'book.detail'])
 
 <h1>Book Details</h1>
 <img src="{{$book->image}}">

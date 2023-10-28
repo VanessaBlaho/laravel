@@ -23,8 +23,8 @@ const search = () => {
                 const bookElement= document.createElement('div');
                 bookElement.classList.add("search_book");
                 bookElement.innerHTML= `
-                <h2>${book.title}</h2>
-                <img src="${book.image}" class="book-image:"><img>`;
+                <h2><a href="/book/${book.id}">${book.title}</a></h2>
+                <img src="${book.image}" class="book-image:" <img>`;
                 resultsContainer.appendChild(bookElement);
         });
         } else{

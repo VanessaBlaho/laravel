@@ -6,27 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @vite('resources/css/app.scss')
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
 </head>
 <body>
  
   @include('common/navigation', [
-    'current_page' => $current_page
-])
-   @include('common.search')
+    'current_page' => $current_page])
+
+    @include('common.search')
+  
    @yield('content')
    @yield('index')
   
    
-      <div id="partners">
+      {{-- <div id="partners">
 
         
 
-      </div>
+      </div> --}}
 
 
-      <div id="latest-books">
+      {{-- <div id="latest-books">
 
-      </div>
+      </div> --}}
       @viteReactRefresh
  
    {{-- @vite('resources/js/app.jsx') --}}

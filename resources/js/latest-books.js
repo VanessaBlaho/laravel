@@ -18,7 +18,7 @@ const thatsSoFetch = async () => {
             <h2>${book.title}</h2>
             <p>Author: ${book.authors[0].name}</p>
             <p>Price: ${book.price}</p>
-            <img src="${book.image}" class="book-image"><img>
+            <img src="${book.image}" class="book-image" ><img>
         `;
     latestBooks.appendChild(bookDiv);
   });
