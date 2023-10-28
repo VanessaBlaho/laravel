@@ -10,10 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
 </head>
+@include('common/navigation', ['current_page' => $current_page])
 <body>
- 
-  @include('common/navigation', [
-    'current_page' => $current_page])
 
     @include('common.search')
   
