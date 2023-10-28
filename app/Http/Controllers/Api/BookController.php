@@ -25,4 +25,14 @@ class BookController extends Controller
         return view('book.detail', compact('book'));
     }
    
+    public function search( $query)
+    {
+        $search = $query;
+
+        $books = Book::where('title', 'like', "%{$search}%")
+        ->limit(10)
+        ->get();
+
+        return $books;
+    }
 }

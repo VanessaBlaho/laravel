@@ -57,5 +57,7 @@ Route::group([
 
     Route::get('/admin/books', [AdminBookController::class,'index']);
     Route::get('/admin/users', [UserController::class, 'index']);
+
+    
 });
 

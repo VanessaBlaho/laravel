@@ -12,6 +12,7 @@
   @include('common/navigation', [
     'current_page' => $current_page
 ])
+   @include('common.search')
    @yield('content')
    @yield('index')
   
@@ -31,6 +32,7 @@
    {{-- @vite('resources/js/app.jsx') --}}
    @vite('resources/js/partners.jsx')
    @vite('resources/js/latest-books.js')
+
  
 
 </body>

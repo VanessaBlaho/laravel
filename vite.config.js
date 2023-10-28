@@ -12,7 +12,8 @@ export default ({ mode }) => {
                     'resources/css/app.scss',
                     'resources/js/partners.jsx',
                     'resources/hs/latest-books.js',
-                    'resources/js/user-list/main.jsx'
+                    'resources/js/user-list/main.jsx',
+                    'resources/js/book-search.js'
                 ],
                 
                 refresh: true,
