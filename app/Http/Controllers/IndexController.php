@@ -18,3 +18,4 @@ class IndexController extends Controller
     return view('index.index',compact('crime_books'));
 }
 }
+

@@ -1,4 +1,14 @@
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
 body {
+    
     color: #b2967d;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
@@ -6,6 +16,9 @@ body {
     
     }
     h1{
+        text-align: center;
+    }
+    h2{
         text-align: center;
     }
     #latest-books{
@@ -28,6 +41,24 @@ body {
         width: 200px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
+    }
+    .book-shop {
+        color:#6b705c;
+        display: flex;
+        background-color: #e6beae;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; 
+        // flex-direction: column;
+        width: 30%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+       
+    }
+    .book-shop img{
+        max-width: 100%; 
+        max-height: 200px; 
+        width: auto; 
     }
     
     .book img {

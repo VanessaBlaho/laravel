@@ -8,7 +8,7 @@ use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\BookReviewController;
-
+use App\Http\Controllers\Api\BookshopController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -36,7 +36,7 @@ Route::get('api/test/model', [TestController::class, 'modelResponse'])->name('mo
 Route::get('api/test/model', [TestController::class, 'modelResponse'])->name('model.response');
 
 Route::get('/home', [HomeController::class, 'home'])->middleware('auth')->name('home');
-
+Route::get('/bookshop/book_shop/{id}',[BookshopController::class, 'show'])->name('bookshop.show');
 
 
 //book detail

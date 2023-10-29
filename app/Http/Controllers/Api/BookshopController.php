@@ -10,18 +10,19 @@ use App\Models\Bookshop;
 class BookshopController extends Controller
 {
     public function show(){
-        $fitness_books= Book::where('category id', 7)
+        $fitness_books= Book::where('category_id', 7)
         ->orderBy('publication_date', 'desc')
         ->with('authors')
-        ->limit(20)
+        ->limit(10)
         ->get();
 
         $bookshop = Bookshop::find(1);
+      
 
         foreach ($fitness_books as $book) {
             $bookshop->books()->attach($book);
         }
          
-        return view('bookshop.show', compact('fitness books'));
+        return view('bookshop.show', compact('fitness_books','bookshop'));
     }
 }

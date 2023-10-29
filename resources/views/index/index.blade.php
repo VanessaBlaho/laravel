@@ -5,7 +5,7 @@
         
    
     
-    <h1>The Best Bookshop Ever</h1>
+    <h1>Book Database</h1>
     <div id="latest-books">
 
     </div>
